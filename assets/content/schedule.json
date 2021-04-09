@@ -1,0 +1,65 @@
+{
+    "title": "Harmonogram",
+    "events": {
+        "0": {
+            "time": "10:00",
+            "name": "Příjezd svatebčanů",
+            "icon": {
+                "name": "arrival",
+                "background": "primary",
+                "variant": "outlined",
+                "colorType": "primary",
+                "color": "main"
+            }
+        },
+        "1": {
+            "time": "11:50",
+            "name": "Obřad",
+            "icon": {
+                "name": "rings",
+                "background": "secondary",
+                "colorType": "common",
+                "color": "white"
+            }
+        },
+        "2": {
+            "time": "13:00",
+            "name": "Svatební hostina",
+            "icon": {
+                "name": "feast",
+                "colorType": "common",
+                "color": "black"
+            }
+        },
+        "3": {
+            "time": "14:30",
+            "name": "Krájení dortu",
+            "icon": {
+                "name": "cake",
+                "background": "primary",
+                "colorType": "common",
+                "color": "white"
+            }
+        },
+        "4": {
+            "time": "18:00",
+            "name": "První tanec",
+            "icon": {
+                "name": "dance",
+                "background": "secondary",
+                "variant": "outlined",
+                "colorType": "secondary",
+                "color": "main"
+            }
+        },
+        "5": {
+            "time": "18:15",
+            "name": "Večerní program",
+            "icon": {
+                "name": "party",
+                "colorType": "common",
+                "color": "black"
+            }
+        }
+    }
+}

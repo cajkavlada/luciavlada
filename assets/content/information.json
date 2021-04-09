@@ -1,0 +1,39 @@
+{
+    "title": "Základní informace",
+    "cards": {
+        "1": {
+            "title": "Datum a čas",
+            "text": "Poznamenejte si do diářů:",
+            "info": "sobota 14.8.2021 v 11:50"
+        },
+        "2": {
+            "title": "Místo",
+            "text": "Své „Ano“ si řekneme v areálu olomouckého Gardenparku, kde nás bude zároveň čekat hostina, večerní zábava a ubytování.",
+            "info": "Kyselovská 123, Olomouc-Slavonín, 779 00"
+        },
+        "3": {
+            "title": "Dresscode",
+            "text": "Svatba se ponese v odstínech světle modré a oranžové. Nebudeme Vás ale trápit a bude nám stačit, když si obléknete něco pohodlného a slavnostnějšího. Pánové, pokud nemáte k dispozici oblek, spokojíme se s černými riflemi a košilí. Svatba proběhne v létě, takže myslete na to, abyste se nám „neuvařili“. Dámy, i když víme, že černá barva krásně zeštíhluje a tvaruje postavu, chtěli bychom Vás poprosit, abyste pro tento významný den zvolily jinou barvu šatů/sukně. Důležitou součástí celého outfitu je také obuv, proto bychom Vás zavčasu rádi upozornili na to, že se celá akce bude odehrávat na zahradě, proto nechte střevíčky na jehlovém podpatku raději ve skříni, mohly by den značně znepříjemnit. Pokud za námi pojedete autem, vlakem či na kole, můžete se obléknout až na místě."
+        },
+        "4": {
+            "title": "Ubytování",
+            "text": "Předpokládáme, že náš slavnostní den rozhodně nebude končit půlnocí. Z toho důvodu nezařizujeme ubytování pro každého z Vás. Nicméně máte možnost postavit si v areálu Gardenparku stan nebo spát přímo pod hvězdami. Rádi bychom doplnili, že přesto budeme mít k dispozici několik pokojů s tím, že kdo dřív přijde, ten spí na posteli. Kdo nepotřebuje ani stan, ani postel, může spát v pokoji na zemi. Pokud Vám žádná z výše uvedených variant nevyhovuje, ozvěte se nám a my Vám můžeme zajistit ubytování v penzionu, který je pár minut chůze od místa konání. Ale pozor, zde si musíte zaplatit nocleh sami. Ceny Vám včas upřesníme."
+        },
+        "5": {
+            "title": "Občerstvení",
+            "text": "Vážení svatebčané, v Gardenparku se můžete těšit na čepované pivo, litry vína a několik druhů tvrdého alkoholu. Rádi bychom Vás upozornili, že máme stanovenou celkovou částku, kterou můžeme během celé akce utratit za alkoholické nápoje. Pokud se vyčerpá, chtěli bychom Vás poprosit, abyste si útratu po zbytek akce platili ze svého. Totéž platí i pro nápoje, jež nejsou uvedeny na nápojovém lístku novomanželů. Pokud budete mít zájem dát si něco „navíc“, bude to na Váš účet, samozřejmě pokud Vás nevěsta nebo ženich sami nepozvou:) Myslíme také na řidiče a ty, kteří potřebují ředit alkohol vodou, případně jiným nealkoholickým nápojem. Nemusíte s sebou vozit řízky a chléb, protože Vás pohostíme. Oběd budeme mít všichni stejný (nebojte se, svíčková to nebude). Pokud máte nějaký speciální požadavek (intolerance, alergie apod.), dejte nám prosím vědět pomocí přihlašovacího formuláře. Společně najdeme vhodnou alternativu. K večeru pro Vás bude připravený raut a pro statečné, jež s námi vydrží slavit až do rána, bude v neděli připravena snídaně."
+        },
+        "6": {
+            "title": "Dary",
+            "text": "Největším darem pro nás bude potvrzení Vaší účasti. Už nějaký pátek spolu žijeme v zařízeném bytečku, do domácnosti nic nepotřebujeme. Asi nejtrefněji vše vystihuje následující veršík: Svatebčané naši milí, dovolte nám prosbičku, raději než věcné dary, naplňte nám kasičku. Mnohokrát Vám děkujeme za každičký halíř, stokrát lepší než nést domů sto desátý talíř. 😊"
+        },
+        "7": {
+            "title": "Zvířátka",
+            "text": "Nevěsta prosí o vyjádření ohledně velkých psů. Její rodina má 3 krásné chlupáče. (afgánský chrt) V den svatby pro ně nebudeme mít hlídání, a tak budou slavit s námi. Pokud by se někdo bál, poznamenejte to do přihlašovacího formuláře a uděláme, co je v našich silách, abyste s našimi čtyřnohými miláčky přišli do kontaktu co nejméně."
+        },
+        "8": {
+            "title": "Kontakty",
+            "text": "V případě jakýchkoliv otázek nás neváhejte kontaktovat. Nevěsta: Lucie Macková 774 061 414 lucikamackova@seznam.cz Ženich: Vladimír Čajka 607 974 267 cajka.vlada@gmail.com"
+        }
+    }
+}

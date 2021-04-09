@@ -1,0 +1,13 @@
+{
+    "title": "Seznam hostů",
+    "columns": {
+        "1": "Jméno",
+        "2": "Příjmení",
+        "3": "Vadí stan?",
+        "4": "Chci hotel?",
+        "5": "Vadí psi?",
+        "6": "Dieta",
+        "7": "Dietní požadavky",
+        "8": "Zpráva"
+    }
+}
