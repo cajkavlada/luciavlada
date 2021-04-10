@@ -19,7 +19,6 @@ const FlipLayout = ({ children, cardsWidth }) => {
       </Grid>
     </Grid>
   ));
-  console.log(children);
   return (
     <Grid container style={{ width: "80%", margin: "auto" }} direction="column">
       {sections}

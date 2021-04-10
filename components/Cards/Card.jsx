@@ -20,7 +20,6 @@ const Card = ({ content }) => {
         </>
       );
   }
-  console.log(cardContent);
   return (
     <MuiCard>
       <CardContent>{cardContent}</CardContent>

@@ -1,5 +1,6 @@
 import React from "react";
-import Headline from "../components/Headline/Headline";
+import { Container, Typography, Paper } from "@material-ui/core";
+import { useTheme } from "@material-ui/core/styles";
 import {
   Timeline,
   TimelineItem,
@@ -9,17 +10,17 @@ import {
   TimelineConnector,
   TimelineContent,
 } from "@material-ui/lab";
-import { Typography, Paper } from "@material-ui/core";
-import {useTheme} from "@material-ui/core/styles";
+import { ReactSVG } from "react-svg";
+
+import Headline from "../components/Headline/Headline";
+
 import schedule from "../assets/content/schedule.json";
 import styles from "../styles/harmonogram.module.css";
-import { ReactSVG } from "react-svg";
 
 const harmonogram = () => {
   const theme = useTheme();
-  console.log(theme.palette["primary"]);
   return (
-    <>
+    <Container maxWidth="sm">
       <Headline>{schedule.title}</Headline>
       <Timeline align="alternate">
         {Object.values(schedule.events).map((event, index) => (
@@ -58,7 +59,7 @@ const harmonogram = () => {
           </TimelineItem>
         ))}
       </Timeline>
-    </>
+    </Container>
   );
 };
 

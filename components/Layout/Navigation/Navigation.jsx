@@ -1,49 +1,86 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
-import { AppBar, IconButton, Toolbar, Button } from "@material-ui/core";
+import {
+  AppBar,
+  IconButton,
+  Toolbar,
+  Button,
+  SwipeableDrawer,
+  ListItem,
+  ListItemText,
+  ListItemIcon,
+  Divider,
+  Hidden,
+} from "@material-ui/core";
+import InboxIcon from "@material-ui/icons/MoveToInbox";
 import MenuIcon from "@material-ui/icons/Menu";
+import MailIcon from "@material-ui/icons/Mail";
 import styles from "./Navigation.module.css";
+import List from "@material-ui/core/List";
+import links from "../../../assets/content/navigation.json";
 
-const Navigation = (props) => {
+const Navigation = () => {
+  const [drawerOpen, setDrawerOpen] = useState(false);
+
+  const toggleDrawer = (open) => (event) => {
+    if (
+      event &&
+      event.type === "keydown" &&
+      (event.key === "Tab" || event.key === "Shift")
+    ) {
+      return;
+    }
+    setDrawerOpen(open);
+  };
+
   return (
     <>
-      <AppBar position="static" color="primary">
+      <AppBar position="static">
         <Toolbar>
-          <IconButton
-            edge="start"
-            className={styles.menuButton}
-            color="inherit"
-            aria-label="menu"
-          >
-            <MenuIcon />
-          </IconButton>
-          <Link href="/">
-            <a>
-              <Button color="inherit">Domů</Button>
-            </a>
-          </Link>
-          <Link href="/informace">
-            <a>
-              <Button color="inherit">Základní informace</Button>
-            </a>
-          </Link>
-          <Link href="/harmonogram">
-            <a>
-              <Button color="inherit">Harmonogram</Button>
-            </a>
-          </Link>
-          <Link href="/galerie">
-            <a>
-              <Button color="inherit">Galerie</Button>
-            </a>
-          </Link>
-          <Link href="/ucast">
-            <a>
-              <Button color="inherit">Potvrzení účasti</Button>
-            </a>
-          </Link>
+          <Hidden smUp>
+            <IconButton
+              edge="start"
+              color="inherit"
+              aria-label="menu"
+              onClick={toggleDrawer(true)}
+            >
+              <MenuIcon />
+            </IconButton>
+          </Hidden>
+          <Hidden xsDown>
+            {Object.values(links).map((link) => (
+              <Link key={link.path} href={link.path}>
+                <a>
+                  <Button color="inherit">{link.label}</Button>
+                </a>
+              </Link>
+            ))}
+          </Hidden>
         </Toolbar>
       </AppBar>
+      <SwipeableDrawer
+        anchor={"left"}
+        open={drawerOpen}
+        onClose={toggleDrawer(false)}
+        onOpen={toggleDrawer(true)}
+      >
+        <div
+          className={styles.list}
+          role="presentation"
+          onClick={toggleDrawer(false)}
+          onKeyDown={toggleDrawer(false)}
+        >
+          <List>
+            {Object.values(links).map((link) => (
+              <Link key={link.path} href={link.path}>
+                <ListItem button>
+                  <ListItemText primary={link.label} />
+                </ListItem>
+              </Link>
+            ))}
+          </List>
+        </div>
+      </SwipeableDrawer>
     </>
   );
 };

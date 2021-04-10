@@ -1,7 +1,10 @@
 import React from "react";
-import Headline from "../components/Headline/Headline";
-import styles from "../styles/galerie.module.css";
 import { motion } from "framer-motion";
+import { Container } from "@material-ui/core";
+
+import Headline from "../components/Headline/Headline";
+import Map from "../components/Map/Map";
+import styles from "../styles/galerie.module.css";
 
 const galerie = (props) => {
   const images = [
@@ -14,25 +17,25 @@ const galerie = (props) => {
     enter: (direction) => {
       return {
         x: direction > 0 ? 1000 : -1000,
-        opacity: 0
+        opacity: 0,
       };
     },
     center: {
       zIndex: 1,
       x: 0,
-      opacity: 1
+      opacity: 1,
     },
     exit: (direction) => {
       return {
         zIndex: 0,
         x: direction < 0 ? 1000 : -1000,
-        opacity: 0
+        opacity: 0,
       };
-    }
+    },
   };
 
   return (
-    <>
+    <Container>
       <Headline>Galerie</Headline>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -43,6 +46,7 @@ const galerie = (props) => {
         occaecat cupidatat non proident, sunt in culpa qui officia deserunt
         mollit anim id est laborum.
       </p>
+      <Map/>
       <motion.span
         className={styles.card}
         whileHover={{
@@ -53,7 +57,7 @@ const galerie = (props) => {
           },
         }}
       ></motion.span>
-    </>
+    </Container>
   );
 };
 

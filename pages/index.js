@@ -1,11 +1,12 @@
-import Headline from '../components/Headline/Headline';
-import styles from '../styles/index.module.css';
+import Headline from "../components/Headline/Headline";
+
+import styles from "../styles/index.module.css";
 
 export default function Home() {
   return (
     <div className={styles.body}>
-       <Headline>Lucinka a Vláďa</Headline>
-       <p>
+      <Headline>Lucinka a Vláďa</Headline>
+      <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
@@ -15,5 +16,5 @@ export default function Home() {
         mollit anim id est laborum.
       </p>
     </div>
-  )
+  );
 }

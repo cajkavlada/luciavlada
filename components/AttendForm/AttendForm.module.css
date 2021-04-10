@@ -1,3 +1,36 @@
-.input{
-    margin: 1rem 0;
+.inputs {
+  margin: 1rem 0;
+}
+
+.radio div {
+  display: flex;
+  position: relative;
+}
+
+.radio input {
+  top: 0;
+  left: 0;
+  width: 100%;
+  cursor: inherit;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  padding: 0;
+  z-index: 1;
+  position: absolute;
+}
+
+.radio svg:nth-of-type(2n) {
+  left: 0;
+  position: absolute;
+}
+
+.radioChecked svg:nth-of-type(2n) {
+  transform: scale(1);
+  transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+}
+
+.radioUnchecked svg:nth-of-type(2n) {
+  transform: scale(0);
+  transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
 }

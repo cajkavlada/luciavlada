@@ -1,6 +1,9 @@
 .menuButton {
-    margin-right: 16px,
+  margin-right: 16px;
 }
-.title{
-    flex-grow: 1,
+.title {
+  flex-grow: 1;
+}
+.list {
+  width: "250px";
 }

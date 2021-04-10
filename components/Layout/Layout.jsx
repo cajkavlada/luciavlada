@@ -3,7 +3,6 @@ import Head from "next/head";
 import Header from "./Header/Header";
 import Navigation from "./Navigation/Navigation";
 import Footer from "./Footer/Footer";
-
 import styles from "./Layout.module.css";
 import PageTransition from "./PageTransition/PageTransition";
 
@@ -16,9 +15,7 @@ const Layout = ({ children, route }) => {
       </Head>
       <Header />
       <Navigation />
-      <PageTransition route={route}>
-        <div>{children}</div>
-      </PageTransition>
+      <PageTransition route={route}>{children}</PageTransition>
       <Footer />
     </>
   );

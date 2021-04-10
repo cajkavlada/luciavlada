@@ -1,0 +1,22 @@
+{
+    "home": {
+        "label": "Domů",
+        "path": "/"
+    },
+    "info": {
+        "label": "Základní informace",
+        "path": "/informace"
+    },
+    "schedule": {
+        "label": "Harmonogram",
+        "path": "/harmonogram"
+    },
+    "galerie": {
+        "label": "Galerie",
+        "path": "/galerie"
+    },
+    "attendance": {
+        "label": "Potvrzení účasti",
+        "path": "/ucast"
+    }
+}

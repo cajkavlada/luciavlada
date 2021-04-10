@@ -1,8 +1,14 @@
 import "../utility/stylesInstall";
 import "../styles/globals.css";
-import Layout from "../components/Layout/Layout";
-import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
+import React from "react";
+
+import {
+  createMuiTheme,
+  ThemeProvider,
+} from "@material-ui/core/styles";
 import { lightBlue, orange } from "@material-ui/core/colors";
+
+import Layout from "../components/Layout/Layout";
 
 function MyApp({ Component, pageProps, router }) {
   const theme = createMuiTheme({

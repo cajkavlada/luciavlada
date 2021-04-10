@@ -12,14 +12,11 @@ import {
   Modal,
 } from "@material-ui/core";
 
-import { useRouter } from "next/router";
-
 import axios from "../../utility/axios";
 
 import styles from "./AttendForm.module.css";
 
-const AttendForm = (props) => {
-  const router = useRouter();
+const AttendForm = () => {
   const [name, setName] = useState({
     value: "",
     error: false,
@@ -101,7 +98,6 @@ const AttendForm = (props) => {
         date: new Date(),
       };
 
-      
       axios
         .post("/guests.json", guest)
         .then((response) => console.log(response))
@@ -129,7 +125,7 @@ const AttendForm = (props) => {
           value={surname.value}
           onChange={handleSurnameEdit}
         />
-        <FormGroup className={styles.input}>
+        <FormGroup className="">
           <FormControlLabel
             label="Spaní ve stanu / sdílených pokojích mi vadí?"
             labelPlacement="start"
@@ -143,12 +139,12 @@ const AttendForm = (props) => {
               >
                 <FormControlLabel
                   value="false"
-                  control={<Radio color="primary" />}
+                  control={<Radio />}
                   label="nevadí"
                 />
                 <FormControlLabel
                   value="true"
-                  control={<Radio color="primary" />}
+                  control={<Radio />}
                   label="vadí"
                 />
               </RadioGroup>
@@ -167,12 +163,12 @@ const AttendForm = (props) => {
               >
                 <FormControlLabel
                   value="false"
-                  control={<Radio color="primary" />}
+                  control={<Radio />}
                   label="ne"
                 />
                 <FormControlLabel
                   value="true"
-                  control={<Radio color="primary" />}
+                  control={<Radio />}
                   label="ano"
                 />
               </RadioGroup>
@@ -191,12 +187,12 @@ const AttendForm = (props) => {
               >
                 <FormControlLabel
                   value="false"
-                  control={<Radio color="primary" />}
+                  control={<Radio />}
                   label="ne"
                 />
                 <FormControlLabel
                   value="true"
-                  control={<Radio color="primary" />}
+                  control={<Radio />}
                   label="ano"
                 />
               </RadioGroup>
@@ -215,17 +211,17 @@ const AttendForm = (props) => {
           >
             <FormControlLabel
               value="normal"
-              control={<Radio color="primary" />}
+              control={<Radio />}
               label="Zvířátka (Všežravec)"
             />
             <FormControlLabel
               value="vegetarian"
-              control={<Radio color="primary" />}
+              control={<Radio />}
               label="Rostlinky (Vegetarián)"
             />
             <FormControlLabel
               value="vegan"
-              control={<Radio color="primary" />}
+              control={<Radio />}
               label="Kamínky (Vegan)"
             />
           </RadioGroup>

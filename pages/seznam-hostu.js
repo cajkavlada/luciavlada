@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-import axios from "../utility/axios";
-
 import {
+  Container,
   Paper,
   TableContainer,
   Table,
@@ -10,10 +9,12 @@ import {
   TableCell,
   TableBody,
 } from "@material-ui/core";
-import styles from "../styles/seznam-hostu.module.css";
-import Headline from "../components/Headline/Headline";
-import guestListInfo from "../assets/content/guest-list.json";
 
+import Headline from "../components/Headline/Headline";
+import axios from "../utility/axios";
+
+import guestListInfo from "../assets/content/guest-list.json";
+import styles from "../styles/seznam-hostu.module.css";
 const seznam = () => {
   const [guests, setGuests] = useState([]);
 
@@ -31,7 +32,7 @@ const seznam = () => {
   };
 
   return (
-    <>
+    <Container>
       <Headline>{guestListInfo.title}</Headline>
       <TableContainer component={Paper}>
         <Table className={styles.table} aria-label="simple table">
@@ -50,14 +51,10 @@ const seznam = () => {
                 </TableCell>
                 <TableCell>{guest.surname}</TableCell>
                 <TableCell>
-                  {guest.mindTents === "true"
-                    ? "Nechci"
-                    : "Může být"}
+                  {guest.mindTents === "true" ? "Nechci" : "Může být"}
                 </TableCell>
                 <TableCell>
-                  {guest.wantAccomodation === "true"
-                    ? "5* prosím"
-                    : "K čemu"}
+                  {guest.wantAccomodation === "true" ? "5* prosím" : "K čemu"}
                 </TableCell>
                 <TableCell>
                   {guest.mindDogs === "true" ? "Bojím" : "K noze"}
@@ -76,7 +73,7 @@ const seznam = () => {
           </TableBody>
         </Table>
       </TableContainer>
-    </>
+    </Container>
   );
 };
 
