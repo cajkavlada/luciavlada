@@ -8,15 +8,11 @@ import {
   SwipeableDrawer,
   ListItem,
   ListItemText,
-  ListItemIcon,
-  Divider,
   Hidden,
 } from "@material-ui/core";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
 import MenuIcon from "@material-ui/icons/Menu";
-import MailIcon from "@material-ui/icons/Mail";
-import styles from "./Navigation.module.css";
 import List from "@material-ui/core/List";
+
 import links from "../../../assets/content/navigation.json";
 
 const Navigation = () => {
@@ -65,7 +61,6 @@ const Navigation = () => {
         onOpen={toggleDrawer(true)}
       >
         <div
-          className={styles.list}
           role="presentation"
           onClick={toggleDrawer(false)}
           onKeyDown={toggleDrawer(false)}

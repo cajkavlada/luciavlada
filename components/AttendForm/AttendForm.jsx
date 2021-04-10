@@ -14,8 +14,6 @@ import {
 
 import axios from "../../utility/axios";
 
-import styles from "./AttendForm.module.css";
-
 const AttendForm = () => {
   const [name, setName] = useState({
     value: "",
@@ -244,7 +242,6 @@ const AttendForm = () => {
         />
         <Button
           type="submit"
-          className={styles.input}
           variant="contained"
           color="primary"
           onClick={handleSubmitForm}

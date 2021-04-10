@@ -6,9 +6,9 @@ import AttendForm from "../components/AttendForm/AttendForm";
 
 import attendance from "../assets/content/attendance.json";
 
-const potvrzeni = () => {
+const potvrzeni = (backgroundImg) => {
   return (
-    <Container maxWidth="sm">
+    <Container maxWidth="sm" style={{backgrounImage: "url(../assets/images/32.jpg)"}}>
       <Headline>{attendance.title}</Headline>
       <Typography>{attendance.text}</Typography>
       <AttendForm />

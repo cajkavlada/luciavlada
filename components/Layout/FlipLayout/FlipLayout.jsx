@@ -1,6 +1,5 @@
 import React from "react";
 import { Grid } from "@material-ui/core";
-import styles from "./FlipLayout.module.css";
 
 const FlipLayout = ({ children, cardsWidth }) => {
   const sections = children.map((child, index) => (

@@ -1,8 +1,23 @@
 import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
 
-import styles from "./Footer.module.css";
+const useStyles = makeStyles({
+  footer: {
+    width: "100%",
+    height: "100px",
+    borderTop: "1px solid #eaeaea",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  logo: {
+    marginLeft: "0.5rem",
+    height: "1em",
+  },
+});
 
-const Footer = (props) => {
+const Footer = () => {
+  const styles = useStyles();
   return (
     <footer className={styles.footer}>
       © 2021 Luciavlada{" "}

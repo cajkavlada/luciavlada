@@ -14,7 +14,7 @@ import Headline from "../components/Headline/Headline";
 import axios from "../utility/axios";
 
 import guestListInfo from "../assets/content/guest-list.json";
-import styles from "../styles/seznam-hostu.module.css";
+
 const seznam = () => {
   const [guests, setGuests] = useState([]);
 
@@ -35,7 +35,7 @@ const seznam = () => {
     <Container>
       <Headline>{guestListInfo.title}</Headline>
       <TableContainer component={Paper}>
-        <Table className={styles.table} aria-label="simple table">
+        <Table aria-label="simple table">
           <TableHead>
             <TableRow>
               {Object.values(guestListInfo.columns).map((column, index) => (

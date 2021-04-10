@@ -1,8 +1,26 @@
 import Headline from "../components/Headline/Headline";
 
-import styles from "../styles/index.module.css";
+import { makeStyles } from "@material-ui/core/styles";
+
+const path = "assets/images/32.jpg";
+
+const useStyles = makeStyles({
+  body: {
+    backgroundImage: `url(${path})`,
+    backgroundPosition: "center",
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+    height: "25vh",
+    width: "calc(20vw * 0.54 - 2%)",
+    borderRadius: 8,
+    display: "flex",
+    marginLeft: "10px",
+    marginTop: "10px",
+  },
+});
 
 export default function Home() {
+  const styles = useStyles();
   return (
     <div className={styles.body}>
       <Headline>Lucinka a Vláďa</Headline>

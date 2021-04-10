@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Typography, Paper } from "@material-ui/core";
-import { useTheme } from "@material-ui/core/styles";
+import { useTheme, makeStyles } from "@material-ui/core/styles";
 import {
   Timeline,
   TimelineItem,
@@ -15,10 +15,29 @@ import { ReactSVG } from "react-svg";
 import Headline from "../components/Headline/Headline";
 
 import schedule from "../assets/content/schedule.json";
-import styles from "../styles/harmonogram.module.css";
+
+const useStyles = makeStyles({
+  paper: {
+    padding: "6px 16px",
+  },
+  secondarytail: {
+    backgroundColor: "blue",
+  },
+  bugTypo: {
+    visibility: "hidden",
+  },
+  icon: {
+    width: "32px",
+    height: "32px",
+  },
+  whiteIcon: {
+    fill: "white",
+  },
+});
 
 const harmonogram = () => {
   const theme = useTheme();
+  const styles = useStyles();
   return (
     <Container maxWidth="sm">
       <Headline>{schedule.title}</Headline>

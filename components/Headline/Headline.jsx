@@ -1,23 +1,30 @@
 import React from "react";
-import styles from "./Headline.module.css";
+import { makeStyles } from "@material-ui/core/styles";
 import { motion } from "framer-motion";
 
+const useStyles = makeStyles({
+  title: {
+    textAlign: "center",
+  },
+});
+
 const Headline = ({ children }) => {
+  const styles = useStyles();
   return (
     <motion.div
       initial="hidden"
       animate="visible"
       variants={{
         hidden: {
-          scale: .8,
-          opacity: 0
+          scale: 0.8,
+          opacity: 0,
         },
         visible: {
           scale: 1,
           opacity: 1,
           transition: {
-            delay: .1
-          }
+            delay: 0.1,
+          },
         },
       }}
     >
