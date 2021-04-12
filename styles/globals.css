@@ -14,3 +14,9 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.test{
+    background-image: url("../assets/images/32.jpg");
+    background-position: center;
+    background-size: cover;
+}

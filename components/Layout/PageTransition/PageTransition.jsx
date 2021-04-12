@@ -39,16 +39,6 @@ const PageTransition = ({ children, route }) => {
         initial="pageInitial"
         animate="pageAnimate"
         exit="pageExit"
-        variants={backgroundVariant}
-        transition={{
-          duration: 0.35,
-        }}
-      ></motion.div>
-      <motion.div
-        key={route}
-        initial="pageInitial"
-        animate="pageAnimate"
-        exit="pageExit"
         variants={variant}
         transition={{
           duration: 0.35,

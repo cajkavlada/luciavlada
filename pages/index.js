@@ -2,11 +2,12 @@ import Headline from "../components/Headline/Headline";
 
 import { makeStyles } from "@material-ui/core/styles";
 
-const path = "assets/images/32.jpg";
+import MyImage from "next/image";
+
+const path = "/images/32.jpg";
 
 const useStyles = makeStyles({
   body: {
-    backgroundImage: `url(${path})`,
     backgroundPosition: "center",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
@@ -22,7 +23,13 @@ const useStyles = makeStyles({
 export default function Home() {
   const styles = useStyles();
   return (
-    <div className={styles.body}>
+    <div>
+      <MyImage
+        src={path}
+        alt="Picture of the author"
+        width={500}
+        height={500}
+      />
       <Headline>Lucinka a Vláďa</Headline>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
