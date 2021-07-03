@@ -10,10 +10,10 @@ function MyApp({ Component, pageProps, router }) {
   const theme = createMuiTheme({
     palette: {
       primary: {
-        main: lightBlue[500],
+        main: lightBlue[300],
       },
       secondary: {
-        main: orange[500],
+        main: orange[300],
       },
     },
   });

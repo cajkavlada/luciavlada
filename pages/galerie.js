@@ -1,13 +1,25 @@
 import React from "react";
 import { Container } from "@material-ui/core";
-
+import { makeStyles } from "@material-ui/core/styles";
 import Headline from "../components/Headline/Headline";
-import Map from "../components/Map/Map";
+
+
+const useStyles = makeStyles(theme => ({
+  container: {
+    paddingLeft: '16px',
+    paddingRight: '16px',
+    paddingTop: '60px',
+    [theme.breakpoints.down('sm')]: {
+      paddingTop: '0px',
+    }
+  },
+}));
 
 const galerie = () => {
+  const styles = useStyles();
 
   return (
-    <Container>
+    <Container className={styles.container}>
       <Headline>Galerie</Headline>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -18,7 +30,7 @@ const galerie = () => {
         occaecat cupidatat non proident, sunt in culpa qui officia deserunt
         mollit anim id est laborum.
       </p>
-      <Map />
+      
     </Container>
   );
 };

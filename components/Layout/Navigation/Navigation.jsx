@@ -12,11 +12,19 @@ import {
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import List from "@material-ui/core/List";
+import { useMediaQuery } from 'react-responsive'
 
 import links from "../../../assets/content/navigation.json";
 
 const Navigation = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
+
+  const isDesktopOrLaptop = useMediaQuery({
+    query: '(min-device-width: 1224px)'
+  })
+  const isTabletOrMobileDevice = useMediaQuery({
+    query: '(max-device-width: 1224px)'
+  })
 
   const toggleDrawer = (open) => (event) => {
     if (
@@ -31,7 +39,7 @@ const Navigation = () => {
 
   return (
     <>
-      <AppBar position="static">
+      <AppBar color={isDesktopOrLaptop ? "white" : "transparent" } elevation={0} position="absolute">
         <Toolbar>
           <Hidden smUp>
             <IconButton

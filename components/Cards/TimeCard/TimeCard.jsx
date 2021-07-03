@@ -4,9 +4,9 @@ import { Typography } from "@material-ui/core";
 const TimeCard = ({content}) => {
   return (
     <>
-      <Typography variant="h5">{content.title}</Typography>
+      <Typography color={"primary"} variant="h6">{content.title}</Typography>
       <Typography>{content.text}</Typography>
-      <Typography variant="h5">{content.info}</Typography>
+      <Typography variant="h6">{content.info}</Typography>
     </>
   );
 };

@@ -1,45 +1,78 @@
 import Headline from "../components/Headline/Headline";
-
 import { makeStyles } from "@material-ui/core/styles";
-
+import { useMediaQuery } from 'react-responsive'
 import MyImage from "next/image";
+import { Hidden, Container } from "@material-ui/core";
 
-const path = "/images/32.jpg";
+const path = "/images/10.png";
+const names = "/images/names.png"
+const width = 4640;
+const height = 3472;
 
-const useStyles = makeStyles({
-  body: {
-    backgroundPosition: "center",
-    backgroundSize: "cover",
-    backgroundRepeat: "no-repeat",
-    height: "25vh",
-    width: "calc(20vw * 0.54 - 2%)",
-    borderRadius: 8,
-    display: "flex",
-    marginLeft: "10px",
-    marginTop: "10px",
+
+const useStyles = makeStyles(theme => ({
+  background: {
+    position: "absolute",
+    zIndex: "-10",
+    width: '100%',
+    height: "calc(100vh - 64px)",
   },
-});
+  image: {
+    height: '100vh',
+    position: "absolute",
+    width: '100%',
+  },
+  container: {
+    paddingLeft: 0,
+    paddingRight: 0,
+    margin: 0,
+    [theme.breakpoints.up('xs')]: {
+      paddingTop: '64px',
+    }
+  },
+  headline: {
+    position: 'absolute',
+    top: '25%',
+    left: '70%',
+    transform: 'translate(-50%, -50%)'
+  }
+}));
 
 export default function Home() {
   const styles = useStyles();
+  const isDesktopOrLaptop = useMediaQuery({
+    query: '(min-device-width: 1224px)'
+  })
   return (
-    <div>
+    <Container className={styles.container}>
       <MyImage
+        className={styles.image}
         src={path}
         alt="Picture of the author"
-        width={500}
-        height={500}
+        layout="fill"
+        objectFit="scale-down"
+        objectPosition="center 80%"
       />
-      <Headline>Lucinka a Vláďa</Headline>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
-      </p>
-    </div>
+      { /*<div className={styles.background}>
+        <MyImage
+          className={styles.image}
+          src={path}
+          alt="Picture of the author"
+          layout="fill"
+          objectFit="cover"
+          objectPosition="center 80%"
+        />
+      </div>
+      <div className={styles.headline}>
+        <MyImage
+          className={styles.names}
+          src={names}
+          alt="Picture of the author"
+          width={1050}
+          height={550}
+        />
+      </div>
+      */}
+    </Container>
   );
 }

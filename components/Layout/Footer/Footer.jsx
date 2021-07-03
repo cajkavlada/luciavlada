@@ -5,7 +5,7 @@ const useStyles = makeStyles({
   footer: {
     width: "100%",
     height: "100px",
-    borderTop: "1px solid #eaeaea",
+    //borderTop: "1px solid #eaeaea",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -21,7 +21,7 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       © 2021 Luciavlada{" "}
-      <img src="/vercel.svg" alt="Luciavlada Logo" className={styles.logo} />
+      <img src="/wedding_icon.svg" alt="Luciavlada Logo" className={styles.logo} />
     </footer>
   );
 };

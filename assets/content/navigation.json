@@ -11,10 +11,6 @@
         "label": "Harmonogram",
         "path": "/harmonogram"
     },
-    "galerie": {
-        "label": "Galerie",
-        "path": "/galerie"
-    },
     "attendance": {
         "label": "Potvrzení účasti",
         "path": "/ucast"

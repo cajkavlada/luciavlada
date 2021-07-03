@@ -4,7 +4,7 @@
         "1": {
             "title": "Datum a čas",
             "text": "Poznamenejte si do diářů:",
-            "info": "sobota 14.8.2021 v 11:50"
+            "info": "sobota 14.8.2021 v 11:30"
         },
         "2": {
             "title": "Místo",
@@ -25,7 +25,8 @@
         },
         "6": {
             "title": "Dary",
-            "text": "Největším darem pro nás bude potvrzení Vaší účasti. Už nějaký pátek spolu žijeme v zařízeném bytečku, do domácnosti nic nepotřebujeme. Asi nejtrefněji vše vystihuje následující veršík: Svatebčané naši milí, dovolte nám prosbičku, raději než věcné dary, naplňte nám kasičku. Mnohokrát Vám děkujeme za každičký halíř, stokrát lepší než nést domů sto desátý talíř. 😊"
+            "text": "Největším darem pro nás bude potvrzení Vaší účasti. Už nějaký pátek spolu žijeme v zařízeném bytečku, do domácnosti nic nepotřebujeme. Asi nejtrefněji vše vystihuje následující veršík:",
+            "quote": "Svatebčané naši milí, dovolte nám prosbičku, raději než věcné dary, naplňte nám kasičku. Mnohokrát Vám děkujeme za každičký halíř, stokrát lepší než nést domů sto desátý talíř. 😊"
         },
         "7": {
             "title": "Zvířátka",
@@ -33,7 +34,17 @@
         },
         "8": {
             "title": "Kontakty",
-            "text": "V případě jakýchkoliv otázek nás neváhejte kontaktovat. Nevěsta: Lucie Macková 774 061 414 lucikamackova@seznam.cz Ženich: Vladimír Čajka 607 974 267 cajka.vlada@gmail.com"
+            "text": "V případě jakýchkoliv otázek nás neváhejte kontaktovat.",
+            "contactHer": {
+                "name": "Lucie Macková",
+                "phone": "774 061 414",
+                "mail": "lucikamackova@seznam.cz"
+            },
+            "contactHim": {
+                "name": "Vladimír Čajka",
+                "phone": "607 974 267",
+                "mail": "cajka.vlada@gmail.com"
+            }
         }
     }
 }
