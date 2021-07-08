@@ -10,9 +10,10 @@ import {
   TimelineConnector,
   TimelineContent,
 } from "@material-ui/lab";
-import MyImage from "next/image";
 import { ReactSVG } from "react-svg";
-import { useMediaQuery } from 'react-responsive'
+import { useMediaQuery } from 'react-responsive';
+import BackgroundImage from "../components/BackgroundImage/BackgroundImage";
+
 
 import Headline from "../components/Headline/Headline";
 
@@ -47,13 +48,6 @@ const useStyles = makeStyles(theme => ({
     paddingLeft: 0,
     paddingRight: 0,
   },
-  background: {
-    position: "fixed",
-    zIndex: "-10",
-    width: '100%',
-    height: "100vh",
-    opacity: 0.15,
-  },
 }));
 
 const harmonogram = () => {
@@ -63,21 +57,8 @@ const harmonogram = () => {
   const isDesktopOrLaptop = useMediaQuery({
     query: '(min-device-width: 1224px)'
   })
-  const isTabletOrMobileDevice = useMediaQuery({
-    query: '(max-device-width: 1224px)'
-  })
   return (
-    <>
-      <div className={styles.background}>
-        <MyImage
-          className={styles.image}
-          src={path}
-          alt="Picture of the author"
-          layout="fill"
-          objectFit="cover"
-          objectPosition="center 50%"
-        />
-      </div>
+    <BackgroundImage path={"/images/flower.jpg"}>
       <Container className={styles.container} maxWidth="sm">
         <Headline>{schedule.title}</Headline>
         <Timeline align="alternate" className={styles.timeline}>
@@ -118,7 +99,7 @@ const harmonogram = () => {
           ))}
         </Timeline>
       </Container>
-    </>
+    </BackgroundImage>
   );
 };
 

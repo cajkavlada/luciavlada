@@ -1,9 +1,11 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Card as MuiCard, Box, Paper, CardContent, Typography } from "@material-ui/core";
+import { Card as MuiCard, CardContent, Typography } from "@material-ui/core";
 import TimeCard from "./TimeCard/TimeCard";
 import PlaceCard from "./PlaceCard/PlaceCard";
+import GiftCard from "./GiftCard/GiftCard";
 import ContactCard from "./ContactCard/ContactCard";
+import Separator from "./Separator/Separator";
 
 const useStyles = makeStyles({
   footer: {
@@ -24,6 +26,10 @@ const useStyles = makeStyles({
   },
   card: {
     backgroundColor: 'transparent',
+  },
+  blockText: {
+    textAlign: 'justify',
+    textJustify: 'inter-word',
   }
 });
 
@@ -41,32 +47,19 @@ const Card = ({ content }) => {
       cardContent = <ContactCard content={content} />;
       break;
     case "Dary":
-      cardContent = (
-        <>
-          <Typography color="primary" variant="h6">{content.title}</Typography>
-          <Typography variant="h8">{content.text}</Typography>
-          
-          <Typography variant="h8">
-            <Box fontStyle="italic" m={1}>
-              {content.quote}
-            </Box>
-            </Typography>
-        </>
-      );
+      cardContent = <GiftCard content={content} />;
       break;
     default:
       cardContent = (
         <>
           <Typography color="primary" variant="h6">{content.title}</Typography>
-          <Typography variant="h8">{content.text}</Typography>
+          <Typography display="block" align="justify" variant="h8">{content.text}</Typography>
         </>
       );
   }
   return (
     <MuiCard elevation={0} color="inherit" className={styles.card}>
-      <div className={styles.iconDiv}>
-        <img src="/separator.svg" alt="Luciavlada Logo" className={styles.logo} />
-      </div>
+      <Separator/>
       <CardContent className={styles.card}>{cardContent}</CardContent>
     </MuiCard>
   );

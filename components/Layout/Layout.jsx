@@ -30,7 +30,9 @@ const Layout = ({ children, route }) => {
       </Head>
       <div className={styles.body}>
         <Navigation />
-        <PageTransition route={route}>{children}</PageTransition>
+        <PageTransition route={route}>
+          {children}
+        </PageTransition>
         <div className={styles.footer}>
           <Footer />
         </div>

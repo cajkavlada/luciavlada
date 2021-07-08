@@ -2,7 +2,7 @@ import Headline from "../components/Headline/Headline";
 import { makeStyles } from "@material-ui/core/styles";
 import { useMediaQuery } from 'react-responsive'
 import MyImage from "next/image";
-import { Hidden, Container } from "@material-ui/core";
+import { Container } from "@material-ui/core";
 
 const path = "/images/10.png";
 const names = "/images/names.png"

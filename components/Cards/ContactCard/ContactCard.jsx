@@ -1,6 +1,10 @@
 import React from "react";
+import Link from 'next/link'
 import { Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+
+import ContactInfo from "./ContactInfo/ContactInfo";
+
 const useStyles = makeStyles(theme => ({
   contactsDiv: {
     paddingTop: '32px',
@@ -28,14 +32,10 @@ const PlaceCard = ({content}) => {
       <Typography>{content.text}</Typography>
       <div className={styles.contactsDiv}>
         <div>
-          <Typography>{content.contactHer.name}</Typography>
-          <Typography>{content.contactHer.phone}</Typography>
-          <Typography>{content.contactHer.mail}</Typography>
+          <ContactInfo contactInfo={content.contactHer}/>
         </div>
         <div className={styles.contactDiv}>
-          <Typography>{content.contactHim.name}</Typography>
-          <Typography>{content.contactHim.phone}</Typography>
-          <Typography>{content.contactHim.mail}</Typography>
+          <ContactInfo contactInfo={content.contactHim}/>
         </div>
       </div>
     </>

@@ -1,10 +1,13 @@
 import React from "react";
 import { GoogleMap, LoadScript } from "@react-google-maps/api";
+import { Circle } from "@react-google-maps/api";
 
 const Map = () => {
   const containerStyle = {
     width: "400px",
     height: "400px",
+    maxWidth: "100%",
+    margin: "auto",
   };
 
   const center = {
@@ -14,7 +17,7 @@ const Map = () => {
 
   return (
     <LoadScript googleMapsApiKey="AIzaSyASIo9nz-mTS1d3vsT5f-POrn63AvmtYAw">
-      <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={17} />
+      <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={17}/>
     </LoadScript>
   );
 };

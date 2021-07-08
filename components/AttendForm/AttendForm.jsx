@@ -130,6 +130,11 @@ const AttendForm = () => {
     }
   };
 
+  const handleCloseSnackbar = () => {
+    setModalOpen(false);
+    clearForm();
+  }
+
   return (
     <>
       <FormControl className={styles.formControl}>
@@ -236,30 +241,13 @@ const AttendForm = () => {
       <Snackbar
         open={modalOpen}
         autoHideDuration={3000}
-        onClose={() => {
-          setModalOpen(false);
-          clearForm();
-        }}>
+        onClose={handleCloseSnackbar}>
         <Alert
-          onClose={() => {
-            setModalOpen(false);
-            clearForm();
-          }}
+          onClose={handleCloseSnackbar}
           severity="success">
           Děkujeme za potvrzení!
         </Alert>
       </Snackbar>
-      {/*<Modal
-        open={modalOpen}
-        onClose={() => {
-          setModalOpen(false);
-          clearForm();
-        }}
-        aria-labelledby="simple-modal-title"
-        aria-describedby="simple-modal-description"
-      >
-        {<p>Děkujeme za potvrzení</p>}
-      </Modal>{"Děkujeme za potvrzení!"}*/}
     </>
   );
 };
