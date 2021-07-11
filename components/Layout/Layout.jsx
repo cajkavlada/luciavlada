@@ -23,7 +23,7 @@ const Layout = ({ children, route }) => {
   return (
     <>
       <Head>
-        <title>Lucinka a Vláďa</title>
+        <title>Lucie a Vladimír</title>
         <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href="https://use.typekit.net/nxz8vuz.css"></link>
         <link rel="stylesheet" href="https://use.typekit.net/nxz8vuz.css"></link>
