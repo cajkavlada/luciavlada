@@ -44,9 +44,24 @@ const GiftCard = ({ content }) => {
       <Typography display="block" align="justify" variant="h8">
         Největším darem pro nás bude potvrzení Vaší účasti. Už nějaký pátek spolu žijeme v zařízeném bytečku a do domácnosti – kromě většího botníku – nic nepotřebujeme. Pokud byste i přesto nechtěli přijít s prázdnou, budeme rádi za jakýkoliv příspěvek na líbánky. Asi nejtrefněji vše vystihuje následující veršík:
       </Typography>
-      <Typography display="block" align="justify" variant="h8">
+      <Typography display="block" align="center" variant="h8" className={styles.paragraph}>
         <Box fontStyle="italic" m={1}>
-          Svatebčané naši milí, dovolte nám prosbičku, raději než věcné dary, naplňte nám kasičku. Mnohokrát Vám děkujeme za každičký halíř, stokrát lepší než nést domů sto desátý talíř. 😊
+          Svatebčané naši milí, dovolte nám prosbičku,
+        </Box>
+      </Typography>
+      <Typography display="block" align="center" variant="h8">
+        <Box fontStyle="italic" m={1}>
+          raději než věcné dary, naplňte nám kasičku. 
+        </Box>
+      </Typography>
+      <Typography display="block" align="center" variant="h8">
+        <Box fontStyle="italic" m={1}>
+          Mnohokrát Vám děkujeme za každičký halíř, 
+        </Box>
+      </Typography>
+      <Typography display="block" align="center" variant="h8">
+        <Box fontStyle="italic" m={1}>
+          stokrát lepší než nést domů sto desátý talíř.  😊
         </Box>
       </Typography>
     </>

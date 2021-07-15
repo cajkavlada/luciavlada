@@ -50,7 +50,7 @@ const DressCard = ({ content }) => {
       </Typography>
       <Typography display="block" align="justify" variant="h8" className={styles.paragraph}>
         <Box fontWeight='fontWeightBold' display='inline'>Dámy, </Box> 
-        černá barva krásně zeštíhluje a tvaruje postavu, přesto Vás však prosíme abyste pro náš Velký den zvolily jinou barvu šatů/sukně. Rovněž se vyvarujte bílé barvě, tu přenechte v tento den nevěstě.
+        černá barva krásně zeštíhluje a tvaruje postavu, přesto Vás však prosíme, abyste pro náš Velký den zvolily jinou barvu šatů/sukně. Rovněž se vyvarujte bílé barvě, tu přenechte v tento den nevěstě.
       </Typography>
       <Typography display="block" align="justify" variant="h8" className={styles.paragraph}>
         Důležitou součástí outfitu bývá 

@@ -60,7 +60,7 @@ const CovidCard = ({ content }) => {
       <ListItem>Prodělání laboratorně potvrzeného onemocnění covidem-19 v době ne delší než 180 dnů přede dnem konání svatby</ListItem>
       <ListItem>Aplikační očkování proti covidu-19, přičemž od poslední dávky vakcíny (druhé u dvoudávkových vakcín, první u jednodávkových vakcín), musí uplynout nejméně čtrnáct dní</ListItem>
       <Typography display="block" align="justify" variant="h8" className={styles.paragraphBottom}>
-        Po příjezdu na svatbu předejte podepsané čestné prohlášení pověřené osobě, která jej v případě potřeby předá kontrole. Pokud na prohlášení zapomenete-nezoufejte, můžete jej podepsat i na místě. K dispozici bude rovněž několik samotestů. 
+        Po příjezdu na svatbu předejte podepsané čestné prohlášení pověřené osobě, která jej v případě potřeby předloží kontrole. Pokud na prohlášení zapomenete-nezoufejte, můžete jej podepsat i na místě. K dispozici bude rovněž několik samotestů. 
       </Typography>
       <Typography align="justify" variant="h8">Více informací o covidu a svatbách zde: </Typography>
       <Link href="https://covid.gov.cz/situace/zivotni-udalosti/svatba" >

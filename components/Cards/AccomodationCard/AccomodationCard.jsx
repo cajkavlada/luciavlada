@@ -46,7 +46,7 @@ const AccomodationCard = ({ content }) => {
         {content.title}
       </Typography>
       <Typography display="block" align="justify" variant="h8">
-        Předpokládáme, že nás svatební den nebude končit s půlnocí. Z tohoto důvodu ubytování nezajišťujeme. Nicméně máte možnosti postavit si vedle areálu Gardenparku stan nebo spát přímo pod hvězdami. Rádi bychom doplnili, že i přesto bude k dispozici pár pokojů s tím, že kdo dřív přijde, ten spí na posteli. Kdo nepotřebuje ani stan, ani postel, může spát v témže pokoji na zemi. Přibalte tedy s sebou alespoň spacák nebo deku. 
+        Předpokládáme, že nás svatební den nebude končit s půlnocí. Z tohoto důvodu ubytování nezajišťujeme. Nicméně máte možnost postavit si vedle areálu Gardenparku stan nebo spát přímo pod hvězdami. Rádi bychom doplnili, že i přesto bude k dispozici pár pokojů s tím, že kdo dřív přijde, ten spí na posteli. Kdo nepotřebuje ani stan, ani postel, může spát v témže pokoji na zemi. Přibalte tedy s sebou alespoň spacák nebo deku. 
       </Typography>
       <Typography display="block" align="justify" variant="h8" className={styles.paragraph}>
         Pokud Vám žádná z výše uvedených variant nevyhovuje, ozvěte se nám a my Vám můžeme zajistit ubytování v nedalekém hotelu Hesperia. Ale pozor, zde si musíte zaplatit nocleh sami. 
