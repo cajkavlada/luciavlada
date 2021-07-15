@@ -3,7 +3,15 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Card as MuiCard, CardContent, Typography } from "@material-ui/core";
 import TimeCard from "./TimeCard/TimeCard";
 import PlaceCard from "./PlaceCard/PlaceCard";
+import DressCard from "./DressCard/DressCard";
+import AccomodationCard from "./AccomodationCard/AccomodationCard";
+import RefreshmentCard from "./RefreshmentCard/RefreshmentCard";
 import GiftCard from "./GiftCard/GiftCard";
+import AnimalsCard from "./AnimalsCard/AnimalsCard";
+import ParkingCard from "./ParkingCard/ParkingCard";
+import InstrumentsCard from "./InstrumentsCard/InstrumentsCard";
+import SportCard from "./SportCard/SportCard";
+import CovidCard from "./CovidCard/CovidCard";
 import ContactCard from "./ContactCard/ContactCard";
 import Separator from "./Separator/Separator";
 
@@ -43,12 +51,37 @@ const Card = ({ content }) => {
     case "Místo":
       cardContent = <PlaceCard content={content} />;
       break;
-    case "Kontakty":
-      cardContent = <ContactCard content={content} />;
+    case "Dresscode":
+      cardContent = <DressCard content={content} />;
+      break;
+    case "Ubytování":
+      cardContent = <AccomodationCard content={content} />;
+      break;
+    case "Občerstvení":
+      cardContent = <RefreshmentCard content={content} />;
       break;
     case "Dary":
       cardContent = <GiftCard content={content} />;
       break;
+    case "Zvířátka":
+      cardContent = <AnimalsCard content={content} />;
+      break;
+    case "Parkování":
+      cardContent = <ParkingCard content={content} />;
+      break;
+    case "Hudební nástroje":
+      cardContent = <InstrumentsCard content={content} />;
+      break;
+    case "Sport a hry":
+      cardContent = <SportCard content={content} />;
+      break;
+    case "COVID-19":
+      cardContent = <CovidCard content={content} />;
+      break;
+    case "Kontakty":
+      cardContent = <ContactCard content={content} />;
+      break;
+    
     default:
       cardContent = (
         <>
@@ -60,7 +93,7 @@ const Card = ({ content }) => {
   return (
     <MuiCard elevation={0} color="inherit" className={styles.card}>
       <Separator/>
-      <CardContent className={styles.card}>{cardContent}</CardContent>
+      <CardContent>{cardContent}</CardContent>
     </MuiCard>
   );
 };

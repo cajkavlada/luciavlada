@@ -27,7 +27,7 @@ const informace = () => {
   return (
     <BackgroundImage path={"/images/flower.jpg"}>   
       <Container className={styles.container}>
-        <Headline>{informations.title}</Headline>
+        <Headline>Základní informace</Headline>
         <CardLayout>
           {Object.values(informations.cards).map((info) => (
             <div className={styles.card}>

@@ -34,7 +34,7 @@ const useStyles = makeStyles({
   }
 });
 
-const GiftCard = ({ content }) => {
+const AnimalsCard = ({ content }) => {
   const styles = useStyles();
   return (
     <>
@@ -42,15 +42,10 @@ const GiftCard = ({ content }) => {
         {content.title}
       </Typography>
       <Typography display="block" align="justify" variant="h8">
-        Největším darem pro nás bude potvrzení Vaší účasti. Už nějaký pátek spolu žijeme v zařízeném bytečku a do domácnosti – kromě většího botníku – nic nepotřebujeme. Pokud byste i přesto nechtěli přijít s prázdnou, budeme rádi za jakýkoliv příspěvek na líbánky. Asi nejtrefněji vše vystihuje následující veršík:
-      </Typography>
-      <Typography display="block" align="justify" variant="h8">
-        <Box fontStyle="italic" m={1}>
-          Svatebčané naši milí, dovolte nám prosbičku, raději než věcné dary, naplňte nám kasičku. Mnohokrát Vám děkujeme za každičký halíř, stokrát lepší než nést domů sto desátý talíř. 😊
-        </Box>
+        Nevěsta prosí o vyjádření ohledně velkých psů. Její rodina má tři krásné chlupáče (afgánský chrt). V den svatby pro ně nebudeme mít hlídání, a tak budou slavit s námi. Pokud by se někdo bál, poznamenejte to prosím do přihlašovacího formuláře. Uděláme vše, co bude v našich silách, abyste s našimi čtyřnohými miláčky přišli do kontaktu co nejméně.
       </Typography>
     </>
   );
 };
 
-export default GiftCard;
+export default AnimalsCard;

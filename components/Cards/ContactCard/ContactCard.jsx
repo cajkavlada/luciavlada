@@ -21,6 +21,9 @@ const useStyles = makeStyles(theme => ({
       paddingTop: '16px',
     }
   },
+  paragraph: {
+    paddingTop: '16px',
+  }
 }));
 
 
@@ -38,6 +41,9 @@ const PlaceCard = ({content}) => {
           <ContactInfo contactInfo={content.contactHim}/>
         </div>
       </div>
+      <Typography display="block" align="justify" variant="h8" className={styles.paragraph}>
+        Adresa novomanželů: Dukelská 324, Ústí nad Orlicí 562 01
+      </Typography>
     </>
   );
 };
