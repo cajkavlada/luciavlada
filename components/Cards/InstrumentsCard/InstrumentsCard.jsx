@@ -42,7 +42,7 @@ const InstrumentsCard = ({ content }) => {
         {content.title}
       </Typography>
       <Typography display="block" align="justify" variant="h8">
-        Ovládáte-li hraní na jakýkoliv hudební nástroj, případně učíte-li se na nějaký, nebojte a vezměte jej s sebou na svatbu. Možná se budou hodit, a možná ne. :) 
+        Ovládáte-li hraní na jakýkoliv hudební nástroj, případně učíte-li se na nějaký, nebojte a vezměte jej s sebou na svatbu. Možná se bude hodit, a možná ne. :) 
       </Typography>
     </>
   );
