@@ -38,6 +38,7 @@ const seznam = () => {
         <Table aria-label="simple table">
           <TableHead>
             <TableRow>
+              <TableCell>Počet</TableCell>
               {Object.values(guestListInfo.columns).map((column, index) => (
                 <TableCell key={index}>{column}</TableCell>
               ))}
@@ -47,17 +48,20 @@ const seznam = () => {
             {Object.values(guests).map((guest, index) => (
               <TableRow key={index}>
                 <TableCell component="th" scope="row">
+                  {index + 1}
+                </TableCell>
+                <TableCell component="th" scope="row">
                   {guest.name}
                 </TableCell>
                 <TableCell>{guest.surname}</TableCell>
                 <TableCell>
-                  {guest.mindTents === "true" ? "Nechci" : "Může být"}
+                  {guest.mindTents === "true" ? "Stan ne" : "Stan ano"}
                 </TableCell>
                 <TableCell>
-                  {guest.wantAccomodation === "true" ? "5* prosím" : "K čemu"}
+                  {guest.wantAccomodation === "true" ? "Hotel ano" : "Hotel ne"}
                 </TableCell>
                 <TableCell>
-                  {guest.mindDogs === "true" ? "Bojím" : "K noze"}
+                  {guest.mindDogs === "true" ? "Bojím se psů" : "Psi nevadí"}
                 </TableCell>
                 <TableCell>
                   {guest.diet === "normal"
