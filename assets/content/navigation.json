@@ -8,8 +8,8 @@
         "path": "/informace"
     },
     "schedule": {
-        "label": "Harmonogram",
-        "path": "/harmonogram"
+        "label": "Galerie",
+        "path": "/galerie"
     },
     "attendance": {
         "label": "Potvrzení účasti",
