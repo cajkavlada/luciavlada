@@ -19,6 +19,20 @@ const useStyles = makeStyles(theme => ({
       paddingTop: '0px',
     }
   },
+  videos: {
+  },
+  video: {
+    position: 'relative',
+    paddingBottom: '56.25%', /* 16:9 */
+    height: 0,
+  },
+  iframe: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+  },
 }));
 
 const galerie = () => {
@@ -41,6 +55,42 @@ const galerie = () => {
     <BackgroundImage path={"/images/flower.jpg"}>
       <Container className={styles.container}>
         <Headline>Galerie</Headline>
+        <div className={styles.videos}>
+          <div className={styles.video}>
+            <iframe
+              className={styles.iframe}
+              width="1280"
+              height="720"
+              src="https://www.youtube.com/embed/mv9Bb35T-14"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              allowfullscreen="allowfullscreen"
+              mozallowfullscreen="mozallowfullscreen" 
+              msallowfullscreen="msallowfullscreen" 
+              oallowfullscreen="oallowfullscreen" 
+              webkitallowfullscreen="webkitallowfullscreen"
+            />
+          </div>
+          <div className={styles.video}>
+            <iframe
+              className={styles.iframe}
+              width="1280"
+              height="547"
+              src="https://www.youtube.com/embed/VXCa0JdVKfs"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              allowfullscreen="allowfullscreen"
+              mozallowfullscreen="mozallowfullscreen" 
+              msallowfullscreen="msallowfullscreen" 
+              oallowfullscreen="oallowfullscreen" 
+              webkitallowfullscreen="webkitallowfullscreen"
+            />
+          </div>
+        </div>
         <div>
           <Gallery photos={photos} onClick={openLightbox} />
           <ModalGateway>
