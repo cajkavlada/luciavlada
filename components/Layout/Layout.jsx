@@ -20,6 +20,10 @@ const useStyles = makeStyles(theme => ({
 
 const Layout = ({ children, route }) => {
   const styles = useStyles();
+
+  if(route === '/karticky'){
+    return children;
+  }
   return (
     <>
       <Head>
