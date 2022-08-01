@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Typography } from "@material-ui/core";
+import { Typography, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import axios from "../utility/axios";
 
@@ -22,13 +22,14 @@ const useStyles = makeStyles((theme) => ({
   },
   hidden: {
     visibility: 'hidden',
-  }
+  },
 }));
 
 const karticky = () => {
   const styles = useStyles();
 
   const [cards, setCards] = useState([]);
+  const [shuffledCards, setShuffledCards] = useState([]);
   const [currentCard, setCurrentCard] = useState(0)
   const [answerHidden, setAnswerHidden] = useState(true);
 
@@ -37,41 +38,81 @@ const karticky = () => {
   }, []);
 
   useEffect(() => {
-    if(cards) {
-      getRandomCard();
+    if(cards && cards.length > 0) {
+      shuffleCards();
     }
-  }, [cards])
+  }, [cards]);
+
+  const shuffleCards = () => {
+    let newCards = [];
+    axios
+    .get("/learned.json")
+    .then((response) => {
+      const res = response.data;
+      let learned = [];
+      if(res) {
+        learned = Object.values(response.data).map(e => e.index)
+      }
+      cards.forEach((e) => {
+        if(learned.length === 0 || !learned.includes(e.question)){
+          newCards.push(e)
+        };
+      });
+      let currentIndex = newCards.length,  randomIndex;
+      // While there remain elements to shuffle.
+      while (currentIndex != 0) {
+    
+      // Pick a remaining element.
+      randomIndex = Math.floor(Math.random() * newCards.length);
+      currentIndex--;
+  
+      // And swap it with the current element.
+      [newCards[currentIndex], newCards[randomIndex]] = [
+        newCards[randomIndex], newCards[currentIndex]];
+      }
+      setShuffledCards(newCards);
+    })
+    .catch((error) => console.log(error));  
+  }
 
   const loadCards = () => {
     axios
       .get("/cards.json")
       .then((response) => {
-        setCards(response.data);
+        setCards(Object.values(response.data));
       })
       .catch((error) => console.log(error));
   };
 
-  function getRandomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
+  const handleLearnedClick = (event) => {
+    event.stopPropagation();
+    axios.post("/learned.json", {index: shuffledCards[currentCard].question})
+      .then((response) => {
+        console.log('learned card saved');
+        nextCard();
+      })
+      .catch((error) => console.log(error));
   }
-
-  const getRandomCard = () => {
-    console.log(cards.length);
-    setCurrentCard(getRandomInt(0, Object.values(cards).length));
-  };
 
   const handleClick = () => {
     if (answerHidden) {
       setAnswerHidden(false);
     } else {
       setAnswerHidden(true);
-      getRandomCard();
+      nextCard();
     }
   }
 
-  if (!cards || cards.length === 0) {
+  const nextCard = () => {
+    if (currentCard === shuffledCards.length - 1) {
+      shuffleCards();
+      setCurrentCard(0);
+    } else {
+      setCurrentCard(prev => prev + 1);
+    }
+  }
+
+  if (!shuffledCards || shuffledCards.length === 0) {
     return (
       <Typography variant="h2">
           Nemáme žádné vaše kartičky. 
@@ -79,21 +120,19 @@ const karticky = () => {
     );
   }
 
-  console.log(cards);
-  console.log(currentCard);
-
   return (
     <div onClick={handleClick} className={styles.container}>
       <div className={styles.question}>
         <Typography variant="h2">
-          {Object.values(cards)[currentCard].question}
+          {shuffledCards[currentCard].question}
         </Typography>
       </div>
       <div className={`${styles.answer} ${answerHidden ? styles.hidden : null}`}>
         <Typography variant="h2">
-          {Object.values(cards)[currentCard].answer}
+          {shuffledCards[currentCard].answer}
         </Typography>
       </div>
+      <Button className={styles.learnedButton} color="secondary" onClick={handleLearnedClick} variant="contained">Už strašlivě umím!</Button>
     </div>
   );
 };
