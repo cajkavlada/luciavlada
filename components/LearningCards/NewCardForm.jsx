@@ -57,7 +57,6 @@ const NewCardForm = ({loadCards}) => {
   };
 
   const handleCloseSnackbar = () => {
-    console.log('asdasd');
     setModalOpen(false);
   }
 
